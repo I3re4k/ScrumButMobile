@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "title": "Question 1",
+        "text": "Test",
+        "points": "2"
+    },
+    {
+        "id": 2,
+        "title": "Question 2",
+        "text": "Test2",
+        "points": "4"
+    }
+]
