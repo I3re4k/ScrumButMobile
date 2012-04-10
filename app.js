@@ -10,6 +10,7 @@ Ext.application({
     controllers: ['Main'],
     models: ['Model'],
     views: ['Viewport', 'Questions', 'Home', 'Question', 'About', 'Result', 'Header', 'Footer'],
+    stores: ['Data'],
     
     launch: function(){
         Ext.create('ScrumButMobile.view.Viewport');

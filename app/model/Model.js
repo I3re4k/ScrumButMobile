@@ -6,14 +6,3 @@ Ext.define('ScrumButMobile.model.Model', {
         ]
     }
 });
-
-var store = Ext.create('Ext.data.Store', {
-    model: 'ScrumButMobile.model.Model',
-    proxy: {
-        type: 'ajax',
-        url : 'data.json',
-        reader: {
-            type: 'json'
-        }
-    }
-});
