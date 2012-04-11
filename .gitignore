@@ -1,5 +1,3 @@
 !.gitignore
 touch
-app.json
-packager.json
 .project
