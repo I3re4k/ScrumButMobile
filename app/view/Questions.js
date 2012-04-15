@@ -4,7 +4,20 @@ Ext.define('ScrumButMobile.view.Questions', {
     xtype: 'questionsPanel',
     config: {
         title: 'Fragen',
-        iconCls: 'bookmarks'
+        iconCls: 'bookmarks',
+        listeners: {
+            activeitemchange: function() {
+                this.updateResult();
+            }
+        }
+    },
+    
+    updateResult: function() {
+        var items = this.getItems().items;
+        var resultPage = items[items.length - 1];
+        var resultPageText = ScrumButMobile.app.getController('Main').getResultPageText();
+
+        resultPage.setHtml(resultPageText);
     },
     
     show: function() {

@@ -8,7 +8,7 @@ Ext.application({
     
     name: "ScrumButMobile",
     controllers: ['Main'],
-    models: ['Data', 'Score'],
+    models: ['Data', 'Score', 'Result'],
     views: ['Viewport', 'Questions', 'Home', 'Question', 'About', 'Result', 'Header', 'Footer'],
     stores: ['Data', 'Score'],
     

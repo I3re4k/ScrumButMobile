@@ -16,8 +16,16 @@ Ext.define('ScrumButMobile.controller.Main', {
 
     dataModel: "",
     scoreModel: "",
+    resultModel: "",
 
 
+    getResultModel: function() {
+        if("" === this.resultModel) {
+            this.resultModel = Ext.create('ScrumButMobile.model.Result');
+        }
+        return this.resultModel;
+    },
+    
     getScoreModel: function() {
         if("" === this.scoreModel) {
             this.scoreModel = Ext.create('ScrumButMobile.model.Score');
@@ -39,6 +47,18 @@ Ext.define('ScrumButMobile.controller.Main', {
     getQuestions: function() {
         var questions = this.getDataModel().questions;
         return questions;
+    },
+    
+    getScore: function() {
+        var score = this.getScoreModel().getScore();
+        return score;
+    },
+    
+    getResultPageText: function() {
+        var score = this.getScoreModel().getScore();
+        var text = this.getResultModel().getResultPageText(score);
+
+        return text;
     },
     
     createQuestions: function(result, operation, success) {

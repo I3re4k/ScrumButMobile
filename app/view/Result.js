@@ -4,12 +4,11 @@ Ext.define('ScrumButMobile.view.Result', {
     xtype: 'resultPanel',
 
     config: {
-        html: 'Result',
         items: [
             {
                 xtype: 'headerPanel',
                 title: 'Ergebnis'
             }
         ]
-    }
+    },
 });
