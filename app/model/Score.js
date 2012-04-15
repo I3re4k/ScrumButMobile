@@ -56,5 +56,14 @@ Ext.define('ScrumButMobile.model.Score', {
             score = record.data.overallScore;
         }
         return score;
+    },
+    
+    resetScore: function() {
+        var score = this.getScoreStore().getAt(0);
+        if(undefined == score) {
+            this.getScoreStore().add({'overallScore': 0});
+        } else {
+            score.set('overallScore', 0);
+        }
     }
 });

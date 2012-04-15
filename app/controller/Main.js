@@ -85,5 +85,10 @@ Ext.define('ScrumButMobile.controller.Main', {
 
     decreaseScore: function(score) {
         this.getScoreModel().decreaseScore(score);
+    },
+    
+    resetTest: function() {
+        this.getScoreModel().resetScore();
+        this.getDataModel().resetSelected();
     }
 });

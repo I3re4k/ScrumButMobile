@@ -13,6 +13,12 @@ Ext.define('ScrumButMobile.model.Data', {
      */
     questions: [],
 
+    /**
+     * Instances of previous selected Radiobuttons 
+     * index = page, starting at 1
+     *
+     * @param Array
+     */
     previousSelected: [],
 
     setPreviousSelected: function(element, index) {
@@ -84,5 +90,19 @@ Ext.define('ScrumButMobile.model.Data', {
             callback: this.createQuestions,
             scope: this
         });
+    },
+    
+    /**
+     * Sets every radiobutton Object to unchecked and emptys
+     * the previous selected array after that
+     *
+     */
+    resetSelected: function() {
+        for (var i in this.previousSelected) {
+            if (undefined !== this.previousSelected[i]) {
+                this.previousSelected[i].setChecked(false);
+            }
+        }
+        this.previousSelected = [];
     }
 });
