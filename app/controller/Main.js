@@ -52,15 +52,14 @@ Ext.define('ScrumButMobile.controller.Main', {
     },
 
     increaseScore: function(element) {
-        var previousSelected = this.getDataModel().getLastSelected();
+        var previousSelected = this.getDataModel().getPreviousSelected(element.getName());
 
         if(undefined == previousSelected || false == previousSelected.isChecked()) {
-            if (undefined !== previousSelected) {
+            if (undefined !== previousSelected && previousSelected.getName() == element.getName()) {
                 this.decreaseScore(previousSelected.getValue());
             }
             this.getScoreModel().increaseScore(element.getValue());
-            console.log('current Score' + this.getScoreModel().getScore());
-            this.getDataModel().setLastSelected(element);
+            this.getDataModel().setPreviousSelected(element, element.getName());
         }
     },
 

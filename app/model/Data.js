@@ -13,14 +13,14 @@ Ext.define('ScrumButMobile.model.Data', {
      */
     questions: [],
 
-    lastSelected: undefined,
+    previousSelected: [],
 
-    setLastSelected: function(element) {
-        this.lastSelected = element;
+    setPreviousSelected: function(element, index) {
+        this.previousSelected[index] = element;
     },
 
-    getLastSelected: function(){
-        return this.lastSelected;
+    getPreviousSelected: function(index) {
+        return this.previousSelected[index];
     },
 
     /**
@@ -61,13 +61,14 @@ Ext.define('ScrumButMobile.model.Data', {
      */
     createAnswers: function(answers, page) {
         var answersArray = [];
-
+        page = parseInt(page) + 1;
+        
         for(var i = 0; i < answers.length; i++) {
             answersArray[i] = {
                 xtype: 'radiofield',
                 value: answers[i].points,
                 label: answers[i].text,
-                name: 'question' + page
+                name: page
             }
         }
         return answersArray;
