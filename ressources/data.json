@@ -32,19 +32,242 @@
     },
     {
         "id": 2,
-        "title": "Question 2",
-        "text": "Test2",
+        "title": "Qualitätssicherung",
+        "text": "",
         "answers": [
             {
-                "id": "1",
-                "points": 6,
-                "text": "bla"
+                "points": 0,
+                "text": "Keine ausgewiesene Qualitätssicherung"
             },
             {
-                "id": "2",
-                "points": 3,
-                "text": "bla2"
+                "points": 1,
+                "text": "Entwicklertests (Unit Tests)"
+            },
+            {
+                "points": 5,
+                "text": "Funkionen werden getestet"
+            },
+            {
+                "points": 7,
+                "text": "Funkionen werden getestet sobald fertiggestellt"
+            },
+            {
+                "points": 8,
+                "text": "Software übersteht Akzeptanztests"
+            },
+            {
+                "points": 10,
+                "text": "Software wird ausgeliefert"
             }
         ]
-    }
+    },
+    {
+        "id": 3,
+        "title": "Agile Spezifikation",
+        "text": "",
+        "answers": [
+            {
+                "points": 0,
+                "text": "Keine Anforderungen"
+            },
+            {
+                "points": 1,
+                "text": "Große Anforderungsdokumente"
+            },
+            {
+                "points": 4,
+                "text": "Schlechte User Stories"
+            },
+            {
+                "points": 5,
+                "text": "Gute Anforderungen"
+            },
+            {
+                "points": 7,
+                "text": "Gute User Stories"
+            },
+            {
+                "points": 8,
+                "text": "Agile Spezifikation"
+            },
+            {
+                "points": 10,
+                "text": "Gute User Stories mit entsprechender Agiler Spezifikation (wo benötigt)."
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Product Owner",
+        "text": "",
+        "answers": [
+            {
+                "points": 0,
+                "text": "Kein Product Owner"
+            },
+            {
+                "points": 1,
+                "text": "Product Owner versteht Scrum nicht"
+            },
+            {
+                "points": 2,
+                "text": "Product Owner unterbricht das Team"
+            },
+            {
+                "points": 2,
+                "text": "Product Owner arbeitet nicht mit dem Team zusammen"
+            },
+            {
+                "points": 5,
+                "text": "Product Owner pflegt das Product Backlog"
+            },
+            {
+                "points": 8,
+                "text": "Product Owner erstellt Releaseplan basierend auf der Velocity des Teams"
+            },
+            {
+                "points": 10,
+                "text": "Product Owner der das Team motiviert"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Product Backlog",
+        "text": "",
+        "answers": [
+            {
+                "points": 0,
+                "text": "Kein Product Backlog"
+            },
+            {
+                "points": 1,
+                "text": "Mehrere Product Backlogs"
+            },
+            {
+                "points": 3,
+                "text": "Ein Product Backlog"
+            },
+            {
+                "points": 5,
+                "text": "Product Backlog priorisiert anhand von Business Value (vor Sprint Planning)"
+            },
+            {
+                "points": 10,
+                "text": "Product Owner kann den ROI ermitteln basierend auf echten Erlösen, Kosten per Story Points oder anderen Metriken."
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Abschätzungen",
+        "text": "",
+        "answers": [
+            {
+                "points": 0,
+                "text": "Product Backlog nicht abgeschätzt"
+            },
+            {
+                "points": 1,
+                "text": "Abschätzungen nicht vom Team"
+            },
+            {
+                "points": 5,
+                "text": "Abschätzungen nicht mittels Planning Poker ermittelt"
+            },
+            {
+                "points": 8,
+                "text": "Abschätzungen ermitteln mittels Planning Poker"
+            },
+            {
+                "points": 10,
+                "text": "Schätzfehler < 10%"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Burndown CHart",
+        "text": "",
+        "answers": [
+            {
+                "points": 0,
+                "text": "Kein Burndown Chart"
+            },
+            {
+                "points": 1,
+                "text": "Burndown Chart wird nicht durch das Team aktualisiert"
+            },
+            {
+                "points": 2,
+                "text": "Burndown Chart in Stunden/Tagen ohne laufende Arbeiten"
+            },
+            {
+                "points": 4,
+                "text": "Burndown Chart reduziert, falls Task erledigt ist (TrackDone)"
+            },
+            {
+                "points": 5,
+                "text": "Burndown Chart reduziert, sobald Story erledigt ist"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Team kennt seine Velocity",
+        "text": "",
+        "answers": [
+            {
+                "points": 3,
+                "text": "Ja"
+            },
+            {
+                "points": 0,
+                "text": "Nein"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Product Owner Release Plan basierend auf Velocity",
+        "text": "",
+        "answers": [
+            {
+                "points": 2,
+                "text": "Ja"
+            },
+            {
+                "points": 0,
+                "text": "Nein"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Unterbrechungen",
+        "text": "",
+        "answers": [
+            {
+                "points": 0,
+                "text": "Manager oder Projektleiter unterbrechen das Team"
+            },
+            {
+                "points": 1,
+                "text": "Product Owner unterbricht das Team"
+            },
+            {
+                "points": 3,
+                "text": "Tasks werden zugewiesen und nicht von Teammitgliedern aktiv übernommen"
+            },
+            {
+                "points": 5,
+                "text": "Es gibt einen Projektleiter und die Scrum-Rollen"
+            },
+            {
+                "points": 10,
+                "text": "Niemand unterbricht das Team, es gibt nur Scrum-Rollen"
+            },
+        ]
+    },
+    
 ]
