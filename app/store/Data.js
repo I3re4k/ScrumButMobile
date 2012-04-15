@@ -3,7 +3,7 @@ Ext.define('ScrumButMobile.store.Data', {
     storeId: 'Data',
     
     config: {
-        model: 'ScrumButMobile.model.Model',
+        model: 'ScrumButMobile.model.Data',
         proxy: {
             type: 'ajax',
             url : 'ressources/data.json',

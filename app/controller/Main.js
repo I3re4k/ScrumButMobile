@@ -1,40 +1,70 @@
 Ext.define('ScrumButMobile.controller.Main', {
     extend: 'Ext.app.Controller',
-    
-    //all Questions in an item format
-    questions: [],
-    
+
+    config: {
+        control: {
+            'radiofield': {
+                check: 'increaseScore',
+                uncheck: 'increaseScore'
+            }
+        }
+    },
+
     init: function() {
         this.setQuestions();
     },
+
+    dataModel: "",
+    scoreModel: "",
+
+
+    getScoreModel: function() {
+        if("" === this.scoreModel) {
+            this.scoreModel = Ext.create('ScrumButMobile.model.Score');
+        }
+        return this.scoreModel;
+    },
+
+    getDataModel: function() {
+        if("" === this.dataModel) {
+            this.dataModel = Ext.create('ScrumButMobile.model.Data');
+        }
+        return this.dataModel;
+    },
     
-    setQuestions: function(){
-        var store = Ext.data.StoreManager.lookup('Data'); 
-        store.load({
-            //Dynamicly builds questions from store and place them into a carousel
-            callback: this.createQuestions,
-            scope: this
-        });
+    setQuestions: function() {
+        this.getDataModel().setQuestions();
     },
     
     getQuestions: function() {
-        return this.questions;
+        var questions = this.getDataModel().questions;
+        return questions;
     },
     
     createQuestions: function(result, operation, success) {
-        //create all questions
-        for (var i = 0; i < result.length; i++) {
-            this.questions[i] = {
-                xtype: 'questionPanel',
-                html: result[i].data.text,
-                
-                items: [
-                    {
-                        xtype: 'headerPanel',
-                        title: result[i].data.title
-                    }
-                ]
-            };
+        var result = this.getDataModel().createQuestions();
+        return result;
+    },
+
+    createAnswers: function(answers) {
+        var answersResult = this.getDataModel().createAnswers(answers);
+        return answersResult;
+    },
+
+    increaseScore: function(element) {
+        var previousSelected = this.getDataModel().getLastSelected();
+
+        if(undefined == previousSelected || false == previousSelected.isChecked()) {
+            if (undefined !== previousSelected) {
+                this.decreaseScore(previousSelected.getValue());
+            }
+            this.getScoreModel().increaseScore(element.getValue());
+            console.log('current Score' + this.getScoreModel().getScore());
+            this.getDataModel().setLastSelected(element);
         }
+    },
+
+    decreaseScore: function(score) {
+        this.getScoreModel().decreaseScore(score);
     }
 });

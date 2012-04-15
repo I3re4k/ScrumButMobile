@@ -1,14 +1,50 @@
 [
     {
         "id": 1,
-        "title": "Question 1",
-        "text": "Test",
-        "points": "2"
+        "title": "Iterationen",
+        "text": "",
+        "answers": [
+            {
+                "points": "0",
+                "text": "Keine Iterationen"
+            },
+            {
+                "points": 1,
+                "text": "Lange Iterationen < 6 Wochen"
+            },
+            {
+                "points": 2,
+                "text": "Iterationen mit unterschiedlicher Länge < 6 Wochen"
+            },
+            {
+                "points": 3,
+                "text": "Iterationen mit einer Länge = 6 Wochen"
+            },
+            {
+                "points": 4,
+                "text": "Iterationen mit einer Länge = 5 Wochen"
+            },
+            {
+                "points": 10,
+                "text": "Iterationen mit einer Länge von 4 oder weniger Wochen"
+            }
+        ]
     },
     {
         "id": 2,
         "title": "Question 2",
         "text": "Test2",
-        "points": "4"
+        "answers": [
+            {
+                "id": "1",
+                "points": 6,
+                "text": "bla"
+            },
+            {
+                "id": "2",
+                "points": 3,
+                "text": "bla2"
+            }
+        ]
     }
 ]

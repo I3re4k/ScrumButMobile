@@ -4,7 +4,7 @@ Ext.define('ScrumButMobile.view.Questions', {
     xtype: 'questionsPanel',
     config: {
         title: 'Fragen',
-        iconCls: 'bookmarks',
+        iconCls: 'bookmarks'
     },
     
     show: function() {
@@ -20,4 +20,4 @@ Ext.define('ScrumButMobile.view.Questions', {
         //first page is active
         this.setActiveItem(0);
     }
-})
+});
