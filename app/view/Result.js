@@ -21,7 +21,7 @@ Ext.define('ScrumButMobile.view.Result', {
             }
         ],
         cls: 'resultPanel',
-        layout: 'fit'
+        styleHtmlContent: true,
     },
     
     restartTest: function() {
