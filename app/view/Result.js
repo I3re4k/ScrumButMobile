@@ -19,7 +19,9 @@ Ext.define('ScrumButMobile.view.Result', {
                     }
                 }
             }
-        ]
+        ],
+        cls: 'resultPanel',
+        layout: 'fit'
     },
     
     restartTest: function() {

@@ -9,9 +9,13 @@ Ext.define('ScrumButMobile.view.Questions', {
             activeitemchange: function() {
                 this.updateResult();
             }
-        }
+        },
+        cls: 'questionPanel'
     },
     
+    /**
+     * Updates the Text on the Resultpage 
+     */
     updateResult: function() {
         var items = this.getItems().items;
         var resultPage = items[items.length - 1];

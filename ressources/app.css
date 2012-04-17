@@ -1,0 +1,9 @@
+.resetButton {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.resultPanel {
+    height: 100%;
+}

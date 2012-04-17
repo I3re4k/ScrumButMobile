@@ -21,10 +21,22 @@ Ext.define('ScrumButMobile.model.Data', {
      */
     previousSelected: [],
 
+    
+    /**
+     * Mark a Radiobutton as selected
+     * 
+     * @param element   Selected Radiobutton
+     * @param index     Selected Page
+     */
     setPreviousSelected: function(element, index) {
         this.previousSelected[index] = element;
     },
 
+    /**
+     * Returns a selected Radiobutton
+     *
+     * @return Ext.field.Radiobutton
+     */
     getPreviousSelected: function(index) {
         return this.previousSelected[index];
     },
@@ -63,7 +75,7 @@ Ext.define('ScrumButMobile.model.Data', {
      *
      * @param answers           Answers Array from Store
      * @param page              The Page used for radiobutton groups
-     * @return answersArray     The Answers Array
+     * @return Array     The Answers Array
      */
     createAnswers: function(answers, page) {
         var answersArray = [];
@@ -95,7 +107,6 @@ Ext.define('ScrumButMobile.model.Data', {
     /**
      * Sets every radiobutton Object to unchecked and emptys
      * the previous selected array after that
-     *
      */
     resetSelected: function() {
         for (var i in this.previousSelected) {
