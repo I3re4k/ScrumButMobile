@@ -4,6 +4,7 @@ Ext.define('ScrumButMobile.view.Result', {
     xtype: 'resultPanel',
 
     config: {
+		layout: 'hbox',
         items: [
             {
                 xtype: 'headerPanel',

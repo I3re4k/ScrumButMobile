@@ -2,7 +2,7 @@
     "name": "ScrumButMobile",
     "js": [
         {
-            "path": "touch/sencha-touch-all-debug.js"
+            "path": "touch/sencha-touch-all.js"
         },
         {
             "path": "app.js",

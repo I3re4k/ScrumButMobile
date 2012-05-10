@@ -6,10 +6,21 @@ Ext.define('ScrumButMobile.controller.Main', {
             'radiofield': {
                 check: 'increaseScore',
                 uncheck: 'increaseScore'
-            }
+            },
+			'#startTest': {
+				tap: 'moveToQuestions'
+			}
         }
     },
 
+	/**
+	 * Moves the user to the questions page
+	 */
+	moveToQuestions: function() {
+		//Select tabpanel of viewport and set active item to questions
+		Ext.Viewport.getActiveItem().setActiveItem(1);
+	},
+	
     /**
      * Sets the questions on application startup so they are available when switching 
      * to Questions

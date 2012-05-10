@@ -8,12 +8,12 @@ Ext.define('ScrumButMobile.view.Viewport', {
             {
                 xtype: 'homePanel'
             },
+			{
+                xtype: 'questionsPanel'
+            },
             {
                 xtype: 'aboutPanel'
-            }, 
-            {
-                xtype: 'questionsPanel'
-            }
+            } 
         ]
     }
 });
