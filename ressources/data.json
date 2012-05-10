@@ -187,7 +187,7 @@
     },
     {
         "id": 7,
-        "title": "Burndown CHart",
+        "title": "Burndown Chart",
         "text": "",
         "answers": [
             {
@@ -229,7 +229,7 @@
     },
     {
         "id": 9,
-        "title": "Product Owner Release Plan basierend auf Velocity",
+        "title": "PO Release Plan basierend auf Velocity",
         "text": "",
         "answers": [
             {
