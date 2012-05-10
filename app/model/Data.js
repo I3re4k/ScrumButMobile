@@ -86,6 +86,8 @@ Ext.define('ScrumButMobile.model.Data', {
                 xtype: 'radiofield',
                 value: answers[i].points,
                 label: answers[i].text,
+				labelWidth: '80%',
+				cls: 'questionLabel',
                 name: page
             }
         }

@@ -4,6 +4,10 @@
     right: 10px;
 }
 
-.resultPanel .x-html{
+.resultPanel .x-html {
     height: 100%;
+}
+
+.questionLabel .x-form-label {
+    white-space: normal !important;
 }
