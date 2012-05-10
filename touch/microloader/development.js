@@ -33,7 +33,6 @@ If you are unsure which license is appropriate for your use, please contact the 
         scripts = options.js || [],
         styleSheets = options.css || [],
         i, ln, path;
-		console.log(scripts);
 
     meta('viewport', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no');
     meta('apple-mobile-web-app-capable', 'yes');
