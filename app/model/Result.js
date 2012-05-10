@@ -2,11 +2,11 @@ Ext.define('ScrumButMobile.model.Result', {
     extend: 'Ext.data.Model',
     
     /**
-     * Average Resultpoints 
+     * Average Resultscore 
      *
      * @var Int
      */
-    averagePoints: 50,
+    averageScore: 50,
     
     /**
      * Creates the Resultpage Text and returns it
@@ -17,7 +17,7 @@ Ext.define('ScrumButMobile.model.Result', {
     getResultPageText: function(score) {
         var comment = this.getResultComment(score);
         var text = "Erreichte Punkte: " + score + "</br>" +
-                   "Durschnittliche Punkte: " + this.averagePoints + "</br>" +
+                   "Durschnittliche Punkte: " + this.averageScore + "</br>" +
                    comment;
         return text;
     },
@@ -29,8 +29,13 @@ Ext.define('ScrumButMobile.model.Result', {
      * @return String
      */
     getResultComment: function(score) {
-        var comment = "Könnte besser sein";
-        
+		
+		var comment = "Könnte besser sein"; 
+		
+		if (this.averageScore < score) {
+			comment = "Glückwunsch!"; 
+		} 
+			
         return comment;
     }
 });
