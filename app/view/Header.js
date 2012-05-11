@@ -3,6 +3,7 @@ Ext.define('ScrumButMobile.view.Header', {
     xtype: 'headerPanel',
     
     config: {
-        docked: 'top'
+        docked: 'top',
+		cls: 'headerPanel'
     }
 });

@@ -16,8 +16,8 @@ Ext.define('ScrumButMobile.model.Result', {
      */
     getResultPageText: function(score) {
         var comment = this.getResultComment(score);
-        var text = "Erreichte Punkte: " + score + "</br>" +
-                   "Durschnittliche Punkte: " + this.averageScore + "</br>" +
+        var text = "Erreichte Punkte: " + score + "<br>" +
+                   "Durschnittliche Punkte: " + this.averageScore + "<br>" +
                    comment;
         return text;
     },
