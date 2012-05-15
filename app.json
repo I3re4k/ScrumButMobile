@@ -9,6 +9,16 @@
             "update": "delta"
         }
     ],
+	"css": [
+		{
+			"path": "resources/app.css",
+			"update": "delta"
+		},
+		{
+			"path": "touch/resources/css/sencha-touch.css",
+			"update": "delta"
+		}
+	],
     "appCache": {
         "cache": [
             "index.html"
