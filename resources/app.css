@@ -10,12 +10,20 @@
 }
 
 .resetButton {
-    position: absolute;
+    position: absolute !important;
     bottom: 20px;
     right: 10px;
 }
 
 .questionLabel .x-form-label {
     white-space: normal !important;
+}
+
+.x-toolbar-dark {
+	background-image: none !important;
+}
+
+.x-tabbar-dark  {
+	background-image: none !important;
 }
 
