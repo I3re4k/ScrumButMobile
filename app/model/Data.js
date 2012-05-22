@@ -88,7 +88,8 @@ Ext.define('ScrumButMobile.model.Data', {
                 label: answers[i].text,
 				labelWidth: '80%',
 				cls: 'questionLabel',
-                name: page
+                name: page,
+				id: answers[i].id
             }
         }
         return answersArray;

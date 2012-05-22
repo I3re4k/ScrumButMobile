@@ -49,7 +49,16 @@ Ext.define('ScrumButMobile.controller.Main', {
      * @var ScrumButMobile_model_Result
      */
     resultModel: "",
+	
+	statsModel: "",
 
+	getStatsModel: function() {
+		if ("" === this.statsModel) {
+			this.statsModel = Ext.create('ScrumButMobile.model.Stats');
+		}
+		return this.statsModel;
+	},
+	
     /**
      * Returns the Resultmodel
      *
@@ -140,6 +149,8 @@ Ext.define('ScrumButMobile.controller.Main', {
         //check if user selected the same radiobutton twice
         if(undefined == previousSelected || false == previousSelected.isChecked()) {
             
+			this.getStatsModel().sendStats(element.getId(), element.getName());
+			
             //check if user selected a answer before and decreases score if the previous answer and the current differ
             if (undefined !== previousSelected && previousSelected.getName() == element.getName()) {
                 this.decreaseScore(previousSelected.getValue());
