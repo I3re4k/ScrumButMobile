@@ -25,12 +25,14 @@ Ext.define('ScrumButMobile.view.Questions', {
     },
     
     show: function() {
-        // get questions
-        var questions = ScrumButMobile.app.getController('Main').getQuestions();
-        
-        //place questions into carousel
-        this.setItems(questions);
-        
+		if (1 >= this.getItems().length) {
+			
+			// get questions
+			var questions = ScrumButMobile.app.getController('Main').getQuestions();
+			
+			//place questions into carousel
+			this.setItems(questions);
+        }
         //show carousel
         this.setHidden(false);
         
